@@ -7,7 +7,7 @@ $(document).ready(function(){
           var $carousel = $(this);
           /* Initializes a slick carousel only on mobile screens */
           // slick on mobile
-          if ($(window).width() > 768) {
+          if ($(window).width() > 992) {
               if ($carousel.hasClass('slick-initialized')) {
                   $carousel.slick('unslick');
               }
@@ -15,7 +15,8 @@ $(document).ready(function(){
           else{
               if (!$carousel.hasClass('slick-initialized')) {
                   $carousel.slick({
-                     
+                      centerMode: true,
+                      centerPadding: '60px',
                       slidesToShow: 1,
                       slidesToScroll: 1,
                       mobileFirst: true,
@@ -32,17 +33,6 @@ $(document).ready(function(){
   handleMobileSlider('.slider2');
   
   $('.navbar-toggler').click(function() {
-    //   $(this).attr("aria-expanded", function(i, attr) {
-    //     //   console.log(i, attr);
-    //       if (attr === 'false')  {
-    //         $(this).attr("aria-expanded",'true');
-    //         $('navbar-collapse').addClass("show");
-    //       }
-    //       else 
-    //       $(this).attr("aria-expanded",'false');
-    //       $('navbar-collapse').removeClass("show");
-    //   })
-
       $(this).attr("aria-expanded", function(i, attr) {
         //   console.log(i, attr);
           if (attr === 'false')  {
