@@ -320,6 +320,30 @@ body {
                 position: absolute;
             }
             .events_ {
+                &date {
+                    position: absolute;
+                    top: 0;
+                    left: 6%;
+                    background: #001254;
+                    padding: 10px 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    @include media-breakpoint-down(md) {
+                        font-size: 12px;
+                        padding: 10px 20px;
+                    }
+                    span {
+                        display: block;
+                        font-weight: bold;
+                        font-size: 28px;
+                        line-height: 1;
+                        @include media-breakpoint-down(md) {
+                            font-size: 20px;
+                        }
+                    }
+                }
                 &cont {
                     position: absolute;
                     top: 40%;
@@ -361,10 +385,6 @@ body {
 }
 .slick-slide {
     margin: 0 10px;
-}
-/* the parent */
-.slick-list {
-    // margin: 0 -27px 0 0;
 }
 footer {
     color: #fff;
@@ -426,9 +446,7 @@ footer {
     img {
         width: 100%;
     }
-
 }
-
 ._pc {
     display: block;
     @include media-breakpoint-down(lg) {
